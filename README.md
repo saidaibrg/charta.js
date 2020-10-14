@@ -1,6 +1,6 @@
 # Charta.js - jot down your thoughts anytime, anywhere.
 
-This library can help you include a compact text editor with cloud storage into your software.
+This library can help you include a compact text editor with cloud storage into your web application.
 
 ## Ideas / Brainstorm about charta.js:
 * Inspired by Sticky Notes application on Mac. Can this library offer the handiness of Sticky Notes, but at the same time store all data securely?
