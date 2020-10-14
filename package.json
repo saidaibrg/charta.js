@@ -1,0 +1,19 @@
+{
+  "name": "charta",
+  "version": "0.0.1",
+  "description": "\"note-taking editor for web apps\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saidaibrg/charta.js.git"
+  },
+  "author": "Saida Ibragimova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saidaibrg/charta.js/issues"
+  },
+  "homepage": "https://github.com/saidaibrg/charta.js#readme"
+}
