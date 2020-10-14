@@ -14,3 +14,6 @@ This library can help you include a compact text editor with cloud storage into 
   * Ability to stack notes
   * Password-locked notes
   * Import/export of notes (by sharing files or through cloud)
+  * Maybe an off-line editing option?
+  * Option to add photos/videos/audio?
+  * A graphing/table feature.
