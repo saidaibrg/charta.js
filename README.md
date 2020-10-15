@@ -14,3 +14,4 @@ This library can help you include a compact text editor with cloud storage into 
   * Ability to stack notes
   * Password-locked notes
   * Import/export of notes (by sharing files or through cloud)
+    * Ability to export as different file types (ex. .txt, .rtf, possibly .pdf)
