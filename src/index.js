@@ -64,4 +64,4 @@ function checkEmpty() {
         notes.appendChild(untitled);
     }
 }
-
+// Credit (MIT License): https://github.com/healeycodes/tiny-note-taker 
