@@ -2,6 +2,6 @@
 
 This library can help you include a compact text editor with cloud storage into your web application.
 
-###Contribution: 
+### Contribution: 
 * [Ideas/Brainstorm](IDEAS.md) 
 * [ToDo](TODO.md)
