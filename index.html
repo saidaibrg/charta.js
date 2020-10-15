@@ -5,10 +5,22 @@
     <!-- Allows web authors to choose what version of the Microsoft Internet Explorer is the best for the app.
     https://stackoverflow.com/questions/6771258/what-does-meta-http-equiv-x-ua-compatible-content-ie-edge-do-->
     <title>Welcome to CHARTA</title>
-    <script src="library.js"></script>
     <link rel="stylesheet" href=style.css>
 </head>
 <body> 
-    
+
+<div class="center-both-axis">
+    <h3 class="header">Note Writer</h3>
+    <div class="controls">
+        <button class="new" onclick="newNote()">New Note</button>
+        <select id="notes" onchange="changeNote()"></select>
+        <button class="delete" onclick="deleteNote()">Delete</button>
+    </div>
+    <textarea id="editor" rows="10" onkeyup="saveNote()" onkeydown="checkEmpty()" autofocus
+        placeholder="Start typing..."></textarea>
+
+</div>
+<script src="./index.js"></script>
+<!-- Do not delete/move the line above.-->
 </body>
 </html>
