@@ -7,5 +7,5 @@ This library can help you include a compact text editor with cloud storage into 
 
 
 ### Contribution: 
-* [Ideas/Brainstorm](IDEAS.md) 
-* [ToDo](TODO.md)
+* [Ideas Document](IDEAS.md) 
+* [Upcoming Tasks](TODO.md)
