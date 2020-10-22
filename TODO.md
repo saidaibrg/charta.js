@@ -5,4 +5,3 @@
 
 Comments:
 If the program doesn't run in Chrome/Firefox and you're using Mac, try Safari. 
-  
