@@ -1,7 +1,4 @@
 
-autosize($('textarea'));
-
-
 //Returns the first element that matches a specified CSS selector(s) in the document
 const notes = document.querySelector('#notes');
 const editor = document.querySelector('#editor');
