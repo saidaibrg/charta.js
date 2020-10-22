@@ -7,12 +7,31 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
 }
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0.5;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 2;
+    font-size: inherit;
+    font-family: inherit;
+  }
 
 textarea {
     outline: none; /* Removes the blue glow*/
   }
-  
+
    /* The image on the background of the text file, while the field isn't in focus
    
    textarea {
