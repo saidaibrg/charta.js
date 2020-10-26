@@ -1,7 +1,7 @@
 
 body {
     background-color: #eee;
-    background: url(media/Thank.jpg); /* Fix this bug. The image doesn't show up.*/ 
+    background-image: url("../media/ugotthis.png"); /* Fix this bug. The image doesn't show up.*/ 
     margin: 0;
     color: #111;
     font-family: 'Lato', sans-serif;
@@ -21,6 +21,7 @@ button {
     cursor: pointer;
     outline: none;
     border: 0.5;
+    border-radius: 4px;
     vertical-align: middle;
     text-decoration: none;
     background: transparent;
@@ -30,6 +31,9 @@ button {
     text-align: center;
     margin: 10px; 
     padding: 4px;
+  }
+  button:active{
+      transform:translateY(5px);
   }
 
 textarea {
