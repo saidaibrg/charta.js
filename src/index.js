@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    $("#editor")
+}) //All jquery code goes inside this. Waits for the document to fully load. 
+
 
 //Returns the first element that matches a specified CSS selector(s) in the document
 const notes = document.querySelector('#notes');
@@ -53,6 +57,8 @@ function deleteNote() {
             notes.removeChild(option);
         }
     }
+    $("#editor").slideUp(1000);
+
 }
 
 /**
