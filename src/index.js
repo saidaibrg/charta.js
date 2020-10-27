@@ -1,6 +1,14 @@
-$(document).ready(function(){
-    $("#editor")
-}) //All jquery code goes inside this. Waits for the document to fully load. 
+
+
+$(document).ready(function() {
+    $('#editor').autosize(); //autosizes the textarea
+    $('#delete').on('click', function(){
+        $('#editor').slideToggle(); //removes the note from the view after clicking Delete btn
+    });
+    $('#new').on('click', function(){
+        $('#editor').slideDown(); //displays the note after clicking new btn
+    });
+ }) 
 
 
 //Returns the first element that matches a specified CSS selector(s) in the document
@@ -57,7 +65,6 @@ function deleteNote() {
             notes.removeChild(option);
         }
     }
-    $("#editor").slideUp(1000);
 
 }
 

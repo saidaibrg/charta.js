@@ -64,13 +64,13 @@ textarea {
     margin: 0 0 17px 0;
 }
 
-.new {
+#new {
     color: #F0F7EE;
     background: #978897;
     padding: 8px;
 }
 
-.delete {
+#delete {
     color: #F0F7EE;
     background: #B18FCF;
     padding: 8px;

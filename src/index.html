@@ -15,8 +15,8 @@
 <div class="center-both-axis">
     <h3 class="header"> Chart(a) your life</h3>
     <div class="controls">
-        <button class="new" onclick="newNote()">New note</button>
-        <button class="delete" onclick="deleteNote()">Delete</button>
+        <button id="new" onclick="newNote()">New note</button>
+        <button id="delete" onclick="deleteNote()">Delete</button>
     </div>
     <select class="controls" id="notes" onchange="changeNote()"></select>
     <textarea id="editor" rows="24" cols="48" onkeyup="saveNote()" onkeydown="checkEmpty()" autofocus
