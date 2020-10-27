@@ -10,5 +10,5 @@ This library can help you include a compact text editor with cloud storage into 
 * [Color Scheme](https://coolors.co/d8d8f6-b18fcf-978897-494850) 
 
 ### Current state: 
-<img src="media/screen2.png" width="320" >
+<img src="media/screen3.png" width="320" >
 
