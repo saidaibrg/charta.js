@@ -1,15 +1,14 @@
 
 
 $(document).ready(function() {
-    $('#editor').autosize(); //autosizes the textarea
+    autosize($('#editor')); //autosizes the textarea
     $('#delete').on('click', function(){
         $('#editor').slideToggle(); //removes the note from the view after clicking Delete btn
     });
     $('#new').on('click', function(){
         $('#editor').slideDown(); //displays the note after clicking new btn
     });
- }) 
-
+ })
 
 //Returns the first element that matches a specified CSS selector(s) in the document
 const notes = document.querySelector('#notes');
@@ -78,4 +77,4 @@ function checkEmpty() {
         notes.appendChild(untitled);
     }
 }
-// Credit (MIT License): https://github.com/healeycodes/tiny-note-taker 
+// Credit (MIT License): https://github.com/healeycodes/tiny-note-taker
