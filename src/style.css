@@ -40,13 +40,6 @@ textarea {
     outline: none; /* Removes the blue glow*/
   }
 
-   /* The image on the background of the text file, while the field isn't in focus
-   
-   textarea {
-    background: src(media/ugotthis.png) center center no-repeat; 
-    border: 1px solid #888; 
-  }*/
-
 .center-both-axis {
     height: 100vh;
     display: flex;
