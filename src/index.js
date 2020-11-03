@@ -10,11 +10,15 @@ $(document).ready(function() {
     });
 
     $('#draw').on('click', function(){
-        $('#editor').slideToggle(); //removes the note from the view after clicking Delete btn
-        $('#palette').slideToggle(); //do this
+        $('#editor').slideToggle(); // FIX THIS
+        $('#palette').slideToggle(); 
     });
 
-    var color = $(".selected").css("background-color");
+
+// jQuery drawing-table.js plugin 
+// https://www.jqueryscript.net/other/drawing-paint-canvas-board.html
+
+var color = $(".selected").css("background-color");
 var $canvas = $("canvas");
 var context = $canvas[0].getContext("2d");
 var lastEvent;
@@ -83,6 +87,10 @@ $canvas.mousedown(function(e){
 });
 
  })
+
+
+// Note-taking Part
+
 
 //Returns the first element that matches a specified CSS selector(s) in the document
 const notes = document.querySelector('#notes');
