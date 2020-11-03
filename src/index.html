@@ -8,8 +8,11 @@
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <!-- Importing the Lato Google Font to the project. -->
     <link rel="stylesheet" href=style.css>
+    <link rel="stylesheet" href="drawing-table.css" />
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/autosize/dist/autosize.min.js"></script>
+    <!--<script src="drawing-table.js"></script> jquery drawing plugin -->
+
 </head>
 <body>
 
@@ -18,11 +21,21 @@
     <div class="controls">
         <button id="new" onclick="newNote()">New note</button>
         <button id="delete" onclick="deleteNote()">Delete</button>
+        <button id="draw" onclick="">Draw</button>
     </div>
     <select class="controls" id="notes" onchange="changeNote()"></select>
     <textarea id="editor" rows="24" cols="48" onkeyup="saveNote()" onkeydown="checkEmpty()" autofocus
         placeholder="Start typing..."></textarea>
-
+    <canvas id="palette" width="500" height="300"></canvas>
+    <!-- controls for picking colors-->
+    <div id="color-controls">
+        <ul>
+            <li class="red selected"></li>
+            <li class="blue"></li>
+            <li class="yellow"></li>
+        </ul>
+    </div>
+        
 </div>
 <script src="./index.js"></script>
 <!-- Do not delete/move the line above.-->

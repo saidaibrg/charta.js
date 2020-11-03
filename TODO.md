@@ -1,4 +1,4 @@
-1. Create an auto-sizing textarea
+1. Create an auto-sizing textarea (done)
 2. Add the functionality to draw notes 
 3. Find a library for cloud storage and integrate it 
 4. Add the functionality to download notes in .txt or .pdf formats
