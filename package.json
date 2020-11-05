@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/saidaibrg/charta.js/issues"
   },
-  "homepage": "https://github.com/saidaibrg/charta.js#readme"
+  "homepage": "https://github.com/saidaibrg/charta.js#readme",
+  "dependencies": {
+    "autosize": "^4.0.2",
+    "jquery": "^3.5.1"
+  }
 }

@@ -1,3 +1,97 @@
+
+
+$(document).ready(function() {
+    autosize($('#editor')); //autosizes the textarea
+    $('#delete').on('click', function(){
+        $('#editor').slideToggle(); //removes the note from the view after clicking Delete btn
+    });
+    $('#new').on('click', function(){
+        $('#editor').slideDown(); //displays the note after clicking new btn
+    });
+
+    $('#draw').on('click', function(){
+        $('#editor').slideToggle(); // FIX THIS
+        $('#palette').slideToggle(); 
+    });
+
+
+// jQuery drawing-table.js plugin 
+// https://www.jqueryscript.net/other/drawing-paint-canvas-board.html
+
+var color = $(".selected").css("background-color");
+var $canvas = $("canvas");
+var context = $canvas[0].getContext("2d");
+var lastEvent;
+var mouseDown = false;
+
+
+// show border on clicked color
+$("#color-controls").on("click", "li", function(){
+	$(this).siblings().removeClass("selected");
+	$(this).addClass("selected");
+	
+	
+	color = $(this).css("background-color");
+});
+
+// show color making option
+$("#revealColorSelect").click(function(){
+	changeSpanColor();
+
+	$("#colorSelect").toggle();
+});
+
+// making color by mixing red green blue
+function changeSpanColor(){
+	var r = $("#red").val();
+	var g = $("#green").val();
+	var b = $("#blue").val();
+
+	$("#newColor").css("background-color", "rgb(" + r + "," + g + "," + b + ")");
+}
+
+// changing input range
+$('input[type="range"]').change(changeSpanColor);
+
+// adding the new mixed color to our color lists
+$("#addNewColor").click(function(){
+	var $newColor = $("<li></li>");
+	
+	$newColor.css("background-color", $("#newColor").css("background-color"));
+	
+	$("#color-controls ul").append($newColor);
+	
+	$newColor.click();
+});
+
+// painting with mouse events
+$canvas.mousedown(function(e){
+	lastEvent = e;
+	mouseDown = true;
+	
+}).mousemove(function(e){
+
+	if(mouseDown){
+		context.beginPath();
+		context.moveTo(lastEvent.offsetX, lastEvent.offsetY);
+		context.lineTo(e.offsetX, e.offsetY);
+		context.strokeStyle = color;
+		context.stroke();
+		lastEvent = e;
+	}
+	
+}).mouseup(function(){
+		mouseDown = false;
+}).mouseleave(function(){
+		$canvas.mouseup();
+});
+
+ })
+
+
+// Note-taking Part
+
+
 //Returns the first element that matches a specified CSS selector(s) in the document
 const notes = document.querySelector('#notes');
 const editor = document.querySelector('#editor');
@@ -52,6 +146,7 @@ function deleteNote() {
             notes.removeChild(option);
         }
     }
+
 }
 
 /**
@@ -64,4 +159,4 @@ function checkEmpty() {
         notes.appendChild(untitled);
     }
 }
-// Credit (MIT License): https://github.com/healeycodes/tiny-note-taker 
+// Credit (MIT License): https://github.com/healeycodes/tiny-note-taker
