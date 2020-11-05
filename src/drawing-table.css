@@ -52,6 +52,14 @@ canvas{
 	background-color:#fbc817;
 }
 
+.green{
+	background-color: green;
+}
+
+.magenta{
+	background-color: magenta;
+}
+
 .selected{
 	border:2px solid #fff;
 }
