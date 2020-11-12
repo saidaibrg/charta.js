@@ -1,8 +1,7 @@
 
 body {
-    background-color: #eee;
-    background-image: url("../media/ugotthis.jpg"); 
-    margin: 0;
+    /*background-image: none/*url("../media/ugotthis.jpg"); */
+    background-color: rgb(255, 255, 255);
     color: #111;
     font-family: 'Lato', sans-serif;
     font-size: 1.8rem;
@@ -12,7 +11,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-
+    margin: 0;
 }
 
 button {
