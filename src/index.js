@@ -11,11 +11,11 @@ $(document).ready(function() {
 
     $('#draw').on('click', function(){
         $('#editor').slideToggle(); // FIX THIS
-        $('#palette').slideToggle(); 
+        $('#palette').slideToggle();
     });
 
 
-// jQuery drawing-table.js plugin 
+// jQuery drawing-table.js plugin
 // https://www.jqueryscript.net/other/drawing-paint-canvas-board.html
 
 var color = $(".selected").css("background-color");
@@ -29,8 +29,8 @@ var mouseDown = false;
 $("#color-controls").on("click", "li", function(){
 	$(this).siblings().removeClass("selected");
 	$(this).addClass("selected");
-	
-	
+
+
 	color = $(this).css("background-color");
 });
 
@@ -56,11 +56,11 @@ $('input[type="range"]').change(changeSpanColor);
 // adding the new mixed color to our color lists
 $("#addNewColor").click(function(){
 	var $newColor = $("<li></li>");
-	
+
 	$newColor.css("background-color", $("#newColor").css("background-color"));
-	
+
 	$("#color-controls ul").append($newColor);
-	
+
 	$newColor.click();
 });
 
@@ -68,7 +68,7 @@ $("#addNewColor").click(function(){
 $canvas.mousedown(function(e){
 	lastEvent = e;
 	mouseDown = true;
-	
+
 }).mousemove(function(e){
 
 	if(mouseDown){
@@ -79,7 +79,7 @@ $canvas.mousedown(function(e){
 		context.stroke();
 		lastEvent = e;
 	}
-	
+
 }).mouseup(function(){
 		mouseDown = false;
 }).mouseleave(function(){
@@ -98,6 +98,9 @@ const editor = document.querySelector('#editor');
 
 // Load user's saved notes
 for (let i = 0; i < window.localStorage.length; i++) {
+    if (window.localStorage.key(i).startsWith("drawing---")) {
+      continue;
+    }
     const newNote = document.createElement('option');
     newNote.innerText = window.localStorage.key(i);
     notes.appendChild(newNote);
@@ -124,6 +127,18 @@ function newNote() {
  */
 function changeNote() {
     editor.value = window.localStorage.getItem(notes.value);
+    var $canvas = $("canvas");
+    var canvas = document.getElementById("palette");
+    var context = $canvas[0].getContext("2d");
+    context.fillStyle = "rgba(255, 255, 255, 1)";
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    if (window.localStorage.getItem("drawing---" + notes.value.toString()) != null) {
+      var img = new Image();
+      img.onload = function () {
+        context.drawImage(img, 0, 0);
+      }
+      img.src = window.localStorage.getItem("drawing---" + notes.value.toString());
+    }
 }
 
 /**
@@ -131,6 +146,7 @@ function changeNote() {
  */
 function saveNote() {
     window.localStorage.setItem(notes.value, editor.value);
+    saveDraw();
 }
 
 /**
@@ -160,3 +176,12 @@ function checkEmpty() {
     }
 }
 // Credit (MIT License): https://github.com/healeycodes/tiny-note-taker
+
+/**
+  * Save a drwaing to the current note.
+  */
+function saveDraw() {
+  var canvas = document.getElementById("palette");
+  var myImage = canvas.toDataURL("image/png");
+  window.localStorage.setItem("drawing---" + notes.value, myImage);
+}

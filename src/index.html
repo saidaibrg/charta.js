@@ -23,6 +23,7 @@
         <button id="new" onclick="newNote()">New note</button>
         <button id="delete" onclick="deleteNote()">Delete</button>
         <button id="draw" onclick="">Draw</button>
+        <button id="save_draw" onclick="saveDraw()">Save Drawing</button>
     </div>
     <select class="controls" id="notes" onchange="changeNote()"></select>
     <textarea id="editor" rows="24" cols="48" onkeyup="saveNote()" onkeydown="checkEmpty()" autofocus
@@ -38,7 +39,7 @@
             <li class="magenta selected"></li>
         </ul>
     </div>
-        
+
 </div>
 <script src="./index.js"></script>
 <!-- Do not delete/move the line above.-->
