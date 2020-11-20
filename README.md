@@ -1,6 +1,6 @@
 # Charta.js - jot down your thoughts anytime, anywhere.
 
-This library can help you include a text editor capabilities into your web application. This module is a NodeJS module and is hosted through [npm registry](https://www.npmjs.com/).
+This library can help you include various text editor functions into your web application. This module is a NodeJS module and is hosted through [npm registry](https://www.npmjs.com/).
 
 ## Installation Instructions 
 1) If you haven't already, install [Node.js](https://nodejs.org/en/) first. This automatically will get `npm` (aka package manager for NodeJS) on your computer. 
