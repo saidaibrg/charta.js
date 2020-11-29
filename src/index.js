@@ -188,7 +188,7 @@ function saveDraw() {
   window.localStorage.setItem("drawing---" + notes.value, myImage);
 
 
-module.exports={
+/*module.exports={
     changeSpanColor,
     checkEmpty, 
     newNote,  
@@ -196,4 +196,4 @@ module.exports={
     changeNote,
     deleteNote, 
     saveDraw,
-}
+}*/

@@ -1,5 +1,7 @@
 # Charta.js - jot down your thoughts anytime, anywhere.
 
+**ATTENTION: currently in developement - the package isn't yet ready for utilization. Thanks!** 
+
 This library can help you include various text editor functions into your web application. This module is a NodeJS module and is hosted through [npm registry](https://www.npmjs.com/).
 
 ## Installation Instructions 
@@ -33,5 +35,5 @@ const checkEmpty = myFunctions.checkEmpty;
 
 ### Current state of the application built off this library (in progress): 
 
-<img src="media/screen4.png" width="320" >
+<img src="media/screen5.png" width="320" >
 
