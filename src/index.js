@@ -92,6 +92,7 @@ $canvas.mousedown(function(e){
 // Note-taking Part
 
 
+// Credit to below functions (MIT License): https://github.com/healeycodes/tiny-note-taker 
 //Returns the first element that matches a specified CSS selector(s) in the document
 const notes = document.querySelector('#notes');
 const editor = document.querySelector('#editor');
@@ -175,6 +176,7 @@ function checkEmpty() {
         notes.appendChild(untitled);
     }
 }
+
 // Credit (MIT License): https://github.com/healeycodes/tiny-note-taker
 
 /**
@@ -184,4 +186,14 @@ function saveDraw() {
   var canvas = document.getElementById("palette");
   var myImage = canvas.toDataURL("image/png");
   window.localStorage.setItem("drawing---" + notes.value, myImage);
+
+
+module.exports={
+    changeSpanColor,
+    checkEmpty, 
+    newNote,  
+    saveNote,
+    changeNote,
+    deleteNote, 
+    saveDraw,
 }
