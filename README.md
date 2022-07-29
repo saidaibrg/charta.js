@@ -31,8 +31,3 @@ const checkEmpty = myFunctions.checkEmpty;
 ### Design Elements:
 
 * [Color Scheme](https://coolors.co/ffffff-b18fcf-978897-e1bc29) 
-
-### Current state of the application built off this library (in progress): 
-
-<img src="media/screen5.png" width="320" >
-
